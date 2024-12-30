@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+
+}
+
+body{
+    background-color: var(--light-pink);
+    font-family: 'Work Sans', sans-serif;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.box{
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 540px;
+    margin: 150px auto;
+    padding: 30px;
+    box-shadow: 0px 2px 35px 10px hsla(292, 42%, 14%, 0.11);
+    
+}
+
+.faq-title{
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.question-box h2{
+    font-size: 16px;
+    font-weight: 600;
+    color:var(--dark-purple)
+}
+
+.question-box p{
+    font-size:  16px;
+    font-weight: 400;
+    color: var(--grayish-purple);
+    padding-top: 18px;
+}
+
+.question-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question-header img{
+    cursor: pointer;
+}
+
+hr{
+    border: 0.8px var(--light-pink) solid;
+}
+
+.question-box{
+    padding: 20px 0;
+}
+
+.answer {
+    opacity: 0; /* Invisível por padrão */
+    max-height: 0; /* Esconde visualmente */
+    overflow: hidden; /* Garante que o conteúdo não seja exibido */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  }
+  
+  .answer.show {
+    opacity: 1; /* Totalmente visível */
+    max-height: 500px; /* Ajuste para um valor suficiente para o conteúdo */
+  }
+  
+  
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 20px 0;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 554px) {
+    .box{
+        width: 400px;
+    }
+}
+
+@media (max-width: 375px)  {
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+        background-repeat: no-repeat;
+    }
+
+    .box{
+        width: 300px;
+    }
+}
+
